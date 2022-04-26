@@ -34,10 +34,6 @@
       text-align: center;
     }
 
-    .addpoints {
-      width: 50px;
-    }
-
     .deletebtn {
       background-color: red;
       text-align: center;
@@ -56,6 +52,7 @@
         <th style="text-align: center">Delete</th>
         <th style="text-align: center">Name</th>
         <th style="text-align: center">Score</th>
+        <th style="text-align: center">Category</th>
         <th style="text-align: center">Points Last Round</th>
         <th style="text-align: center">Add Points</th>
       </tr>
@@ -65,9 +62,11 @@
         </td>
         <td>{{player.name}}</td>
         <td>{{player.score}}</td>
+        <td>{{player.category}}</td>
         <td>{{player.pointslr}}</td>
         <td style="display: inline-flex;">
-          <input class="form-control addpoints" type="text" ng-model="player.points" />
+          <input class="form-control" type="text"
+            ng-model="player.points" placeholder="Points" />
         </td>
       </tr>
     </table>
