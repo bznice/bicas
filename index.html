@@ -37,6 +37,14 @@
     .addpoints {
       width: 50px;
     }
+
+    .deletebtn {
+      background-color: red;
+      text-align: center;
+      font-weight: bold;
+      padding: 0 5px;
+      border: 0;
+    }
   </style>
 </head>
 
@@ -45,12 +53,16 @@
   <div class="jumbotron">
     <table class="table table-striped">
       <tr>
-        <th style="text-align: center">Player</th>
+        <th style="text-align: center">Delete</th>
+        <th style="text-align: center">Name</th>
         <th style="text-align: center">Score</th>
         <th style="text-align: center">Points Last Round</th>
         <th style="text-align: center">Add Points</th>
       </tr>
       <tr ng-repeat="player in players">
+        <td>
+          <button class="btn deletebtn" ng-click="deletePlayer(player.name)">X</button>
+        </td>
         <td>{{player.name}}</td>
         <td>{{player.score}}</td>
         <td>{{player.pointslr}}</td>
