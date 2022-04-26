@@ -34,6 +34,11 @@
       text-align: center;
     }
 
+    .jumbotron th {
+      text-align: center;
+      
+    }
+
     .deletebtn {
       background-color: red;
       text-align: center;
@@ -49,12 +54,12 @@
   <div class="jumbotron">
     <table class="table table-striped">
       <tr>
-        <th style="text-align: center">Delete</th>
-        <th style="text-align: center">Name</th>
-        <th style="text-align: center">Score</th>
-        <th style="text-align: center">Category</th>
-        <th style="text-align: center">Points Last Round</th>
-        <th style="text-align: center">Add Points</th>
+        <th>Delete</th>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Category</th>
+        <th>Points Last Round</th>
+        <th>Add Points</th>
       </tr>
       <tr ng-repeat="player in players">
         <td>
