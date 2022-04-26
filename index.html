@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="bicas">
+
+<head>
+  <title>Bicas</title>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/bicas.js"></script>
+  <style>
+    .jumbotron {
+      width: auto;
+      text-align: right;
+      margin: 20px 100px;
+      padding: 50px;
+    }
+
+    .jumbotron h4 {
+      text-align: left;
+    }
+
+    .table {
+      margin: 20px;
+      text-align: center;
+
+    }
+
+    .form-control {
+      margin-bottom: 5px;
+    }
+
+    .title {
+      font-family: 'Lucida Sans';
+      font-style: oblique;
+      text-align: center;
+    }
+
+    .addpoints {
+      width: 50px;
+    }
+  </style>
+</head>
+
+<body ng-controller="bicasCtrl">
+  <h1 class="title">{{app}}</h1>
+  <div class="jumbotron">
+    <table class="table table-striped">
+      <tr>
+        <th style="text-align: center">Player</th>
+        <th style="text-align: center">Score</th>
+        <th style="text-align: center">Points Last Round</th>
+        <th style="text-align: center">Add Points</th>
+      </tr>
+      <tr ng-repeat="player in players">
+        <td>{{player.name}}</td>
+        <td>{{player.score}}</td>
+        <td>{{player.pointslr}}</td>
+        <td style="display: inline-flex;">
+          <input class="form-control addpoints" type="text" ng-model="player.points" />
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <button class="btn btn-primary float-right" ng-if="playersN" ng-click="addPoints()">Add Points</button>
+    <hr />
+    <h4>Insert player:</h4>
+    <input class="form-control" type="text" ng-model="player.name" placeholder="Name" />
+    <button class="btn btn-primary btn-block" ng-click="addPlayer(player)" ng-disabled="!player.name">
+      Add Player
+    </button>
+  </div>
+</body>
+
+</html>
