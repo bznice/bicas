@@ -3,56 +3,15 @@
 
 <head>
   <title>Bicas</title>
-  <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="lib/css/style.css">
   <script src="lib/angular/angular.js"></script>
-  <script src="lib/bicas.js"></script>
-  <style>
-    .jumbotron {
-      width: auto;
-      text-align: right;
-      margin: 20px 100px;
-      padding: 50px;
-    }
-
-    .jumbotron h4 {
-      text-align: left;
-    }
-
-    .table {
-      margin: 20px;
-      text-align: center;
-
-    }
-
-    .form-control {
-      margin-bottom: 5px;
-    }
-
-    .title {
-      font-family: 'Lucida Sans';
-      font-style: oblique;
-      text-align: center;
-    }
-
-    .jumbotron th {
-      text-align: center;
-      
-    }
-
-    .deletebtn {
-      background-color: red;
-      text-align: center;
-      font-weight: bold;
-      padding: 0 5px;
-      border: 0;
-    }
-  </style>
+  <script src="lib/control/bicas.js"></script>
 </head>
 
 <body ng-controller="bicasCtrl">
-  <h1 class="title">{{app}}</h1>
-  <div class="jumbotron">
-    <table class="table table-striped">
+  <h1>{{app}}</h1>
+  <div class="division">
+    <table class="tablePlayers" ng-if="playersN">
       <tr>
         <th>Delete</th>
         <th>Name</th>
@@ -69,18 +28,18 @@
         <td>{{player.score}}</td>
         <td>{{player.category}}</td>
         <td>{{player.pointslr}}</td>
-        <td style="display: inline-flex;">
+        <td>
           <input class="form-control" type="text"
             ng-model="player.points" placeholder="Points" />
         </td>
       </tr>
     </table>
     <hr />
-    <button class="btn btn-primary float-right" ng-if="playersN" ng-click="addPoints()">Add Points</button>
+    <button class="btn addpointsbtn" ng-if="playersN" ng-click="addPoints()">Add Points</button>
     <hr />
     <h4>Insert player:</h4>
     <input class="form-control" type="text" ng-model="player.name" placeholder="Name" />
-    <button class="btn btn-primary btn-block" ng-click="addPlayer(player)" ng-disabled="!player.name">
+    <button class="btn addplayerbtn" ng-click="addPlayer(player)" ng-disabled="!player.name">
       Add Player
     </button>
   </div>

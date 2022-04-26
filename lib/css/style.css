@@ -1,0 +1,82 @@
+body {
+    font-family: 'Lucida Sans';
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    font-style: oblique;
+    font-weight: bold;
+    text-align: center;
+}
+
+h4 {
+    font-weight: bold;
+    text-align: left;
+}
+
+table {
+    color: #ffffff;
+    border-collapse: collapse;
+    width: auto;
+    min-width: 1000px;
+}
+
+td,
+th {
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(75, 0, 0)
+}
+
+tr:nth-child(even) {
+    background-color: rgb(0, 0, 75)
+}
+
+.division {
+    display: grid;
+    justify-content: center;
+    width: fit-content;
+    margin: 20px 100px;
+    padding: 50px;
+    background-color: green;
+}
+
+.form-control {
+    margin-bottom: 5px;
+    padding: 5px 15px;
+}
+
+.btn {
+    font-family: 'Lucida Sans';
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+}
+
+.deletebtn {
+    background-color: red;
+    border: 0;
+    padding: 5px;
+}
+
+.addpointsbtn {
+    background-color: rgb(234, 172, 0);;
+    justify-self: right;
+    width: fit-content;
+}
+
+.addplayerbtn {
+    background-color: rgb(194, 234, 0);;
+    
+}
