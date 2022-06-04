@@ -1,4 +1,6 @@
 body {
+    background-color: #ededed;
+    color: #121212;
     font-family: 'Lucida Sans';
     display: grid;
     justify-content: center;
@@ -10,13 +12,12 @@ h1 {
     text-align: center;
 }
 
-h4 {
+h3 {
     font-weight: bold;
     text-align: left;
 }
 
 table {
-    color: #ffffff;
     border-collapse: collapse;
     width: auto;
     min-width: 1000px;
@@ -34,20 +35,21 @@ th {
 }
 
 tr:nth-child(odd) {
-    background-color: rgb(75, 0, 0)
+    background-color: #be9a2a;
 }
 
 tr:nth-child(even) {
-    background-color: rgb(0, 0, 75)
+    background-color: #9c7600;
 }
 
 .division {
+    background-color: #d3b76e;
     display: grid;
     justify-content: center;
     width: fit-content;
     margin: 20px 100px;
     padding: 50px;
-    background-color: green;
+    border-radius: 25px;
 }
 
 .form-control {
@@ -57,26 +59,29 @@ tr:nth-child(even) {
 
 .btn {
     font-family: 'Lucida Sans';
+    font-size: 12px;
     text-align: center;
     font-weight: bold;
     padding: 5px 15px;
-    border: none;
     border-radius: 3px;
+    border-width: 1px;
 }
 
 .deletebtn {
     background-color: red;
+    border-color: darkred;
     border: 0;
     padding: 5px;
 }
 
 .addpointsbtn {
-    background-color: rgb(234, 172, 0);;
+    background-color: #7a7af9;
+    border-color: #6262c7;
     justify-self: right;
     width: fit-content;
 }
 
 .addplayerbtn {
-    background-color: rgb(194, 234, 0);;
-    
+    background-color: #b68a1b;
+    border-color: #947119;
 }
