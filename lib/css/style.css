@@ -8,13 +8,31 @@ body {
 
 h1 {
     font-style: oblique;
-    font-weight: bold;
     text-align: center;
 }
 
 h3 {
+    margin-top: 0;
+}
+
+h1,
+h3,
+th {
     font-weight: bold;
+}
+
+h3,
+h4 {
     text-align: left;
+}
+
+h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11.5px;
+    margin: 0px;
+    margin-bottom: 2px;
+    border: none;
+    padding: none;
 }
 
 table {
@@ -25,13 +43,9 @@ table {
 
 td,
 th {
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     text-align: center;
     padding: 8px;
-}
-
-th {
-    font-weight: bold;
 }
 
 tr:nth-child(odd) {
@@ -48,13 +62,14 @@ tr:nth-child(even) {
     justify-content: center;
     width: fit-content;
     margin: 20px 100px;
-    padding: 50px;
+    padding: 30px;
     border-radius: 25px;
 }
 
 .form-control {
     margin-bottom: 5px;
     padding: 5px 15px;
+    border-radius: 3px;
 }
 
 .form-points {

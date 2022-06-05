@@ -11,42 +11,52 @@
 <body ng-controller="bicasCtrl">
   <h1>{{app}}</h1>
   <div class="division">
-    <table class="tablePlayers" ng-if="playersN">
-      <tr>
-        <th>Delete</th>
-        <th>Name</th>
-        <th>Score</th>
-        <th>Round Category</th>
-        <th>Points Last Round</th>
-        <th>Add Points</th>
-        <th>Dealer</th>
-      </tr>
-      <tr ng-repeat="player in players">
-        <td>
-          <button class="btn deletebtn" ng-click="deletePlayer(player.name)">X</button>
-        </td>
-        <td>{{player.name}}</td>
-        <td>{{player.score}}</td>
-        <td>{{player.category}}</td>
-        <td>{{player.pointslr}}</td>
-        <td>
-          <input class="form-control form-points" type="text"
-            ng-model="player.points" placeholder="Points" />
-        </td>
-        <td>
-          <input type="checkbox" ng-model="player.dealer" value=true/>
-        </td>
-      </tr>
-    </table>
-    <p></p>
-    <button class="btn addpointsbtn" ng-if="playersN" ng-click="addPoints()">Add Points</button>
-    <p></p>
-    <p></p>
+    <div ng-if="playersN">
+      <table class="tablePlayers">
+        <tr>
+          <th>Delete</th>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Round Category</th>
+          <th>Points Last Round</th>
+          <th>Add Points</th>
+          <th>Dealer</th>
+        </tr>
+        <tr ng-repeat="player in players">
+          <td>
+            <button class="btn deletebtn" ng-click="deletePlayer(player.name)">X</button>
+          </td>
+          <td>{{player.name}}</td>
+          <td>{{player.score}}</td>
+          <td>{{player.category}}</td>
+          <td>{{player.pointslr}}</td>
+          <td>
+            <input class="form-control form-points" type="text"
+              ng-model="player.points" placeholder="Points" />
+          </td>
+          <td>
+            <input type="checkbox" ng-model="player.dealer" value=true/>
+          </td>
+        </tr>
+      </table>
+      <p></p>
+      <button class="btn addpointsbtn" ng-click="addPoints()">Add Points</button>
+    </div>
     <h3>Insert player:</h3>
     <input class="form-control" type="text" ng-model="player.name" placeholder="Name" />
     <button class="btn addplayerbtn" ng-click="addPlayer(player)" ng-disabled="!player.name">
       Add Player
     </button>
+    <p></p>
+    <p></p>
+    <h3>Information:</h3>
+    <h4 ng-repeat="line in rulesEN.intro">{{line}}</h4>
+    <p></p>
+    <h4 ng-repeat="line in rulesEN.rules">{{line}}</h4>
+    <p></p>
+    <h4 ng-repeat="line in rulesEN.special">{{line}}</h4>
+    <p></p>
+    <h4 ng-repeat="line in rulesEN.points">{{line}}</h4>
   </div>
 </body>
 
