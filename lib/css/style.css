@@ -21,7 +21,9 @@ h3 {
 
 h1,
 h3,
-th {
+th,
+.btn,
+#errorCheckboxes {
     font-weight: bold;
 }
 
@@ -83,7 +85,6 @@ tr:nth-child(even) {
 .btn {
     font-size: 12px;
     text-align: center;
-    font-weight: bold;
     padding: 5px 15px;
     border-radius: 3px;
     border-width: 1px;
@@ -96,10 +97,14 @@ tr:nth-child(even) {
     padding: 5px;
 }
 
+#errorCheckboxes,
+.addpointsbtn {
+    justify-self: right;
+}
+
 .addpointsbtn {
     background-color: #7a7af9;
     border-color: #6262c7;
-    justify-self: right;
     width: fit-content;
 }
 

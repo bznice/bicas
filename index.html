@@ -40,6 +40,7 @@
     </table>
     <p ng-if="playersN"></p>
     <button class="btn addpointsbtn" ng-click="addPoints()" ng-if="playersN">Add Points</button>
+    <span id="errorCheckboxes" ng-if="playersN"></span>
     <h3>Insert player:</h3>
     <input class="form-control" type="text" ng-model="player.name" placeholder="Name" />
     <button class="btn addplayerbtn" ng-click="addPlayer(player)" ng-disabled="!player.name">
