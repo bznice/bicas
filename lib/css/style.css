@@ -1,9 +1,13 @@
 body {
     background-color: #ededed;
     color: #121212;
-    font-family: 'Lucida Sans';
     display: grid;
     justify-content: center;
+}
+
+body,
+.btn {
+    font-family: 'Lucida Sans';
 }
 
 h1 {
@@ -37,8 +41,7 @@ h4 {
 
 table {
     border-collapse: collapse;
-    width: auto;
-    min-width: 1000px;
+    width: fit-content;
 }
 
 td,
@@ -78,7 +81,6 @@ tr:nth-child(even) {
 }
 
 .btn {
-    font-family: 'Lucida Sans';
     font-size: 12px;
     text-align: center;
     font-weight: bold;
