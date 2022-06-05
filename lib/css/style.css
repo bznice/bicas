@@ -57,6 +57,11 @@ tr:nth-child(even) {
     padding: 5px 15px;
 }
 
+.form-points {
+    width: 50px;
+    text-align: center;
+}
+
 .btn {
     font-family: 'Lucida Sans';
     font-size: 12px;
