@@ -21,7 +21,7 @@
         <th>Add Points</th>
         <th>Dealer</th>
       </tr>
-      <tr ng-repeat="player in players">
+      <tr ng-repeat="player in players | orderBy:'score'">
         <td>
           <button class="btn deletebtn" ng-click="deletePlayer(player.name)">X</button>
         </td>
