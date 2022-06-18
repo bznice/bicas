@@ -1,0 +1,30 @@
+<table class="tablePlayers">
+    <tr>
+      <th>Delete</th>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Round Category</th>
+      <th>Previous Round Points</th>
+      <th>Add Points</th>
+      <th>Dealer</th>
+    </tr>
+    <tr ng-repeat="player in players">
+      <td>
+        <button class="btn deletebtn" ng-click="deletePlayer(player.name)">X</button>
+      </td>
+      <td>{{player.name}}</td>
+      <td>{{player.score}}</td>
+      <td>{{player.category}}</td>
+      <td>{{player.pointslr}}</td>
+      <td>
+        <input class="form-control form-points" type="text"
+          ng-model="player.points" placeholder="Points" />
+      </td>
+      <td>
+        <input type="checkbox" ng-model="player.dealer" value=true/>
+      </td>
+    </tr>
+  </table>
+  <p></p>
+  <button class="btn addpointsbtn" ng-click="addPoints()">Add Points</button>
+  <span id="errorPointsCheckboxes" class="errorSpan"></span>

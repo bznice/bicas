@@ -1,0 +1,35 @@
+@import 'themes.css';
+
+.roundTable {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-even-background-color);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--table-odd-background-color);
+}
+
+td,
+th {
+    border: 1px solid;
+    border-color: var(--table-border-color);
+    text-align: center;
+}
+
+th {
+    padding: 3px;
+    font-weight: bold;
+}
+
+td {
+    padding: 8px;
+}

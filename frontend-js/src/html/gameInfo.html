@@ -1,0 +1,21 @@
+<p></p>
+<div class="divRules">
+    <h2>Game Information:</h2>
+    <p ng-repeat="line in gameInfoEN.intro" class="pRules">{{line}}</p>
+</div>
+<p></p>
+<div class="divRules">
+    <h3>Original rules of the Bicas:</h3>
+    <p ng-repeat="line in gameInfoEN.rules" class="pRules">{{line}}</p>
+</div>
+<p></p>
+<div id="sp" class="divRules">
+    <div class="divRules" style="padding-right: 10px;">
+        <h3>Special cards:</h3>
+        <p ng-repeat="line in gameInfoEN.special" class="pRules">{{line}}</p>
+    </div>
+    <div class="divRules">
+        <h3>Points:</h3>
+        <p ng-repeat="line in gameInfoEN.points" class="pRules">{{line}}</p>
+    </div>
+</div>

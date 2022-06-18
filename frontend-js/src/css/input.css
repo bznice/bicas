@@ -1,0 +1,23 @@
+@import 'themes.css';
+
+.form-control {
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+
+.form-points {
+    background-color: var(--addptn-input-background-color);
+    border-color: var(--addptn-input-border-color);
+    color: var(--addptn-input-text-color);
+    text-align: center;
+    margin: 0;
+    max-width: 50px;
+}
+
+.form-player {
+    background-color: var(--addplr-input-background-color);
+    border-color: var(--addplr-input-border-color);
+    color: var(--addplr-input-text-color);
+    font-size: 12px;
+    margin: 0 0 10px;
+}

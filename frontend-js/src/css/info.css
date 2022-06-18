@@ -1,0 +1,40 @@
+@import 'themes.css';
+
+.infoButtons {
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+}
+
+.divRules {
+    text-align: left;
+    margin: 0;
+}
+
+.pRules {
+    font-family: 'Lucida Console';
+    font-size: 12px;
+    font-weight: 550;
+    line-height: 150%;
+    margin: 0 0 5px;
+}
+
+.rules {
+    grid-template-columns: 100%;
+    justify-content: center;
+}
+
+#sp {
+    grid-template-columns: 85% 15%;
+}
+
+.divRules,
+.pRules {
+    border: 0;
+    padding: 0;
+}
+
+.infoButtons,
+.rules,
+#sp {
+    display: grid;
+}

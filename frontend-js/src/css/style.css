@@ -1,0 +1,34 @@
+@import 'themes.css';
+
+body {
+    background-color: var(--body-background-color);
+    color: var(--body-text-color);
+    font-family: 'Lucida Sans';
+    margin: 10px;
+}
+
+h1 {
+    text-shadow: var(--body-shadow-color) 1px 1px;
+    font-style: oblique;
+    text-align: center;
+}
+
+h2,
+h3 {
+    text-align: left;
+    margin: 0 0 10px;
+}
+
+.division {
+    background-color: var(--division-background-color);
+    border-radius: 25px;
+    margin: 20px 100px;
+    padding: 30px;
+}
+
+body,
+.division {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+}

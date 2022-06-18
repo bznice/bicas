@@ -1,0 +1,53 @@
+.light {
+    --body-background-color: #ededed;
+    --body-text-color: #121212;
+    --body-shadow-color: #010101;
+    --table-border-color: #888888;
+    --table-even-background-color: #dac483;
+    --table-odd-background-color: #e6d8b3;
+    --division-background-color: #d3b76e;
+    --delete-button-background-color: #aa0000;
+    --delete-button-border-color: #888888;
+    --delete-button-text-color: #121212;
+    --addplr-button-background-color: #b68a1b;
+    --addplr-button-border-color: #888888;
+    --addplr-button-text-color: #121212;
+    --addplr-button-text-color-disabled: #5c5c5c;
+    --theme-button-background-color: #121212;
+    --theme-button-border-color: #888888;
+    --theme-button-text-color: #ededed;
+    --addplr-input-background-color: #dcdcdc;
+    --addplr-input-border-color: #ededed;
+    --addplr-input-text-color: #121212;
+    --addptn-input-background-color: #dcdcdc;
+    --addplr-input-border-color: #ededed;
+    --addptn-input-text-color: #121212;
+    --error-span-text-color: #aa0000;
+}
+
+.dark {
+    --body-background-color: #010101;
+    --body-text-color: #c6c6c6;
+    --body-shadow-color: #b5b5b5;
+    --table-even-background-color: #2e2e2e;
+    --table-odd-background-color: #121212;
+    --table-border-color: #888888;
+    --division-background-color: #1e1e1e;
+    --delete-button-background-color: #AA0000;
+    --delete-button-border-color: #888888;
+    --delete-button-text-color: #121212;
+    --addplr-button-background-color: #9c9c9c;
+    --addplr-button-border-color: #888888;
+    --addplr-button-text-color: #121212;
+    --addplr-button-text-color-disabled: #5c5c5c;
+    --theme-button-background-color: #ededed;
+    --theme-button-border-color: #888888;
+    --theme-button-text-color: #121212;
+    --addplr-input-background-color: #dcdcdc;
+    --addplr-input-border-color: #cbcbcb;
+    --addplr-input-text-color: #121212;
+    --addptn-input-background-color: #dcdcdc;
+    --addptn-input-border-color: #cbcbcb;
+    --addptn-input-text-color: #121212;
+    --error-span-text-color: #cc0000;
+}

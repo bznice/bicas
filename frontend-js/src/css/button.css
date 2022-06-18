@@ -1,0 +1,50 @@
+@import 'themes.css';
+
+.btn {
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+.themebtn {
+    background-color: var(--theme-button-background-color);
+    border-color: var(--theme-button-border-color);
+    color: var(--theme-button-text-color);
+    font-size: 9px;
+    padding: 5px;
+}
+
+.deletebtn {
+    background-color: var(--delete-button-background-color);
+    border-color: var(--delete-button-border-color);
+    color: var(--delete-button-text-color);
+    padding: 5px;
+}
+
+.addpointsbtn {
+    background-color: var(--addplr-button-background-color);
+    border-color: var(--addplr-button-border-color);
+    color: var(--addplr-button-text-color);
+    width: fit-content;
+}
+
+.addplayerbtn:disabled {
+    color: var(--addplr-button-text-color-disabled);
+}
+
+.addplayerbtn,
+.infobtn {
+    margin: 0 0 10px;
+    background-color: var(--addplr-button-background-color);
+    border-color: var(--addplr-button-border-color);
+    color: var(--addplr-button-text-color);
+}
+
+.addpointsbtn,
+.themebtn {
+    justify-self: right;
+}

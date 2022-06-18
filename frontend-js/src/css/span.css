@@ -1,0 +1,22 @@
+@import 'themes.css';
+
+#themeChanged,
+#errorPointsCheckboxes,
+#errorPlayerExists {
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    margin: 2px 0 2px;
+}
+
+#themeChanged,
+#errorPointsCheckboxes {
+    justify-self: right;
+}
+
+#errorPlayerExists {
+    justify-self: left;
+}
+
+.errorSpan {
+    color: var(--error-span-text-color);
+}
