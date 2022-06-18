@@ -58,7 +58,9 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         if(isMultiplePlayer(player.name)) {
             var re = /\s*,\s*/;
             var arrayPlayersNames = player.name.split(re);
-            if(playersIncludePlayerListByName(arrayPlayersNames)) {
+            if(listOfPlayersHaveRepeated(arrayPlayersNames)) {
+                repeatedPlayersInList(player);
+            } else if(playersIncludePlayerListByName(arrayPlayersNames)) {
                 playerAlreadyExists(player);
             } else {
                 var players = [];
@@ -118,12 +120,25 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         $scope.players.forEach(player => {
             if(arrayOnlyNames.some(name => player.name === name)) exists = true;
         });
+        (new Set(arrayOnlyNames)).size !== arrayOnlyNames.length;
         return exists ? true : false;
     }
 
+    var listOfPlayersHaveRepeated = function(arrayOnlyNames) {
+        return ((new Set(arrayOnlyNames)).size != arrayOnlyNames.length);
+    }
+    
     var playerAlreadyExists = function (player) {
         var logErrorPlayerExists = document.getElementById("errorPlayerExists");
         logErrorPlayerExists.textContent = "This player already exists!";
+        if($scope.playerExistSpanTimeout != "") clearTimeout($scope.playerExistSpanTimeout);
+        $scope.playerExistSpanTimeout = setTimeout(clearDemo, 2000, logErrorPlayerExists, $scope.playerExistSpanTimeout);
+        player.name = "";
+    }
+    
+    var repeatedPlayersInList = function (player) {
+        var logErrorPlayerExists = document.getElementById("errorPlayerExists");
+        logErrorPlayerExists.textContent = "Repeated names in list!";
         if($scope.playerExistSpanTimeout != "") clearTimeout($scope.playerExistSpanTimeout);
         $scope.playerExistSpanTimeout = setTimeout(clearDemo, 2000, logErrorPlayerExists, $scope.playerExistSpanTimeout);
         player.name = "";
