@@ -9,8 +9,18 @@ body {
 
 h1 {
     text-shadow: var(--body-shadow-color) 1px 1px;
+    font-size: 30px;
     font-style: oblique;
     text-align: center;
+}
+
+h2 {
+    text-shadow: var(--body-shadow-color) 1px 1px;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
 }
 
 h2,
