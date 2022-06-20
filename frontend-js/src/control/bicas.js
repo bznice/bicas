@@ -49,7 +49,7 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         logThemeChanged.textContent = "Theme changet to"
                     + (document.body.className.includes("light") ? " light" : " dark");
         if($scope.themeSpanTimeout != "") clearTimeout($scope.themeSpanTimeout);
-        $scope.themeSpanTimeout = setTimeout(clearDemo, 2000, logThemeChanged, $scope.themeSpanTimeout);
+        $scope.themeSpanTimeout = setTimeout(clearDemo, 3000, logThemeChanged, $scope.themeSpanTimeout);
     }
 
     //----------------- ADD/DELETE PLAYERS METHODS ---------------------------
@@ -132,7 +132,7 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         var logErrorPlayerExists = document.getElementById("errorPlayerExists");
         logErrorPlayerExists.textContent = "This player already exists!";
         if($scope.playerExistSpanTimeout != "") clearTimeout($scope.playerExistSpanTimeout);
-        $scope.playerExistSpanTimeout = setTimeout(clearDemo, 2000, logErrorPlayerExists, $scope.playerExistSpanTimeout);
+        $scope.playerExistSpanTimeout = setTimeout(clearDemo, 3000, logErrorPlayerExists, $scope.playerExistSpanTimeout);
         player.name = "";
     }
     
@@ -140,7 +140,7 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         var logErrorPlayerExists = document.getElementById("errorPlayerExists");
         logErrorPlayerExists.textContent = "Repeated names in list!";
         if($scope.playerExistSpanTimeout != "") clearTimeout($scope.playerExistSpanTimeout);
-        $scope.playerExistSpanTimeout = setTimeout(clearDemo, 2000, logErrorPlayerExists, $scope.playerExistSpanTimeout);
+        $scope.playerExistSpanTimeout = setTimeout(clearDemo, 3000, logErrorPlayerExists, $scope.playerExistSpanTimeout);
         player.name = "";
     }
 
@@ -188,39 +188,42 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
 
     var validatePointsAndCheckboxes = function () {
         var error = document.getElementById("errorPointsCheckboxes");
-        if($scope.players.filter(player => player.dealer).length > 1
-                && $scope.players.filter(player => player.points == "").length > 0
-                && $scope.players.filter(player => player.points == "0").length == 0
-                && $scope.players.filter(player => player.points == "0").length > 1) {
-            error.textContent = "WTF ARE YOU DOING?!?!";
+
+        if($scope.players.length < 2) {
+            error.textContent = "At least 2 players, autist!";
             if($scope.pointsSpanTimeout != "") clearTimeout($scope.pointsSpanTimeout);
-            $scope.pointsSpanTimeout = setTimeout(clearDemo, 2000, error, $scope.pointsSpanTimeout);
+            $scope.pointsSpanTimeout = setTimeout(clearDemo, 3000, error, $scope.pointsSpanTimeout);
             return false;
         }
+
         if($scope.players.filter(player => player.dealer).length > 1) {
             error.textContent = "Please select 0 or 1 dealer in checkboxes, only!";
             if($scope.pointsSpanTimeout != "") clearTimeout($scope.pointsSpanTimeout);
-            $scope.pointsSpanTimeout = setTimeout(clearDemo, 2000, error, $scope.pointsSpanTimeout);
+            $scope.pointsSpanTimeout = setTimeout(clearDemo, 3000, error, $scope.pointsSpanTimeout);
             return false;
         }
+
         if($scope.players.filter(player => player.points == "").length > 0) {
             error.textContent = "Please insert all points (even zero to winner)!";
             if($scope.pointsSpanTimeout != "") clearTimeout($scope.pointsSpanTimeout);
-            $scope.pointsSpanTimeout = setTimeout(clearDemo, 2000, error, $scope.pointsSpanTimeout);
+            $scope.pointsSpanTimeout = setTimeout(clearDemo, 3000, error, $scope.pointsSpanTimeout);
             return false;
         }
+
         if($scope.players.filter(player => player.points == "0").length == 0) {
             error.textContent = "This round don't have winner!";
             if($scope.pointsSpanTimeout != "") clearTimeout($scope.pointsSpanTimeout);
-            $scope.pointsSpanTimeout = setTimeout(clearDemo, 2000, error, $scope.pointsSpanTimeout);
+            $scope.pointsSpanTimeout = setTimeout(clearDemo, 3000, error, $scope.pointsSpanTimeout);
             return false;
         }
+        
         if($scope.players.filter(player => player.points == "0").length > 1) {
             error.textContent = "Only one winner per round!";
             if($scope.pointsSpanTimeout != "") clearTimeout($scope.pointsSpanTimeout);
-            $scope.pointsSpanTimeout = setTimeout(clearDemo, 2000, error, $scope.pointsSpanTimeout);
+            $scope.pointsSpanTimeout = setTimeout(clearDemo, 3000, error, $scope.pointsSpanTimeout);
             return false;
         }
+        
         return true;
     }
   
