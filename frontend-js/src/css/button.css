@@ -32,6 +32,13 @@
     width: fit-content;
 }
 
+.rempointsbtn {
+    background-color: var(--addplr-button-background-color);
+    border-color: var(--addplr-button-border-color);
+    color: var(--addplr-button-text-color);
+    padding: 5px;
+}
+
 .addplayerbtn:disabled {
     color: var(--addplr-button-text-color-disabled);
 }

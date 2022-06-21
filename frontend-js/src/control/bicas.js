@@ -102,12 +102,12 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         });
     }
 
-    var isMultiplePlayer = function(name) {
+    var isMultiplePlayer = function (name) {
         var separators = [",", " ,", ", "," , "];
         return separators.some(sep => name.includes(sep));
     }
 
-    var playersIncludePlayerByName = function(name) {
+    var playersIncludePlayerByName = function (name) {
         var exists = false;
         $scope.players.forEach(player => {
             if(player.name === name) exists = true;
@@ -115,7 +115,7 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         return exists ? true : false;
     }
 
-    var playersIncludePlayerListByName = function(arrayOnlyNames) {
+    var playersIncludePlayerListByName = function (arrayOnlyNames) {
         var exists = false;
         $scope.players.forEach(player => {
             if(arrayOnlyNames.some(name => player.name === name)) exists = true;
@@ -124,7 +124,7 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         return exists ? true : false;
     }
 
-    var listOfPlayersHaveRepeated = function(arrayOnlyNames) {
+    var listOfPlayersHaveRepeated = function (arrayOnlyNames) {
         return ((new Set(arrayOnlyNames)).size != arrayOnlyNames.length);
     }
     
@@ -144,7 +144,7 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         player.name = "";
     }
 
-    //----------------- ADD POINTS METHODS -----------------------------------
+    //----------------- ADD/DELETE POINTS METHODS ----------------------------
 
     $scope.addPoints = function () {
         if (validatePointsAndCheckboxes()) {
@@ -184,6 +184,11 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
                 });
             }
         }
+    }
+
+    $scope.removePoints = function (player) {
+        player.score = Number(player.score) - Number(player.points);
+        player.points = "";
     }
 
     var validatePointsAndCheckboxes = function () {
