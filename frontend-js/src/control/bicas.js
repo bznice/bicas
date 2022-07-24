@@ -191,6 +191,14 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         player.points = "";
     }
 
+    $scope.sendDigit = function(number) {
+        
+    }
+
+    // document.getElementById("ze").addEventListener("click", () => {
+
+    // });
+
     var validatePointsAndCheckboxes = function () {
         var error = document.getElementById("errorPointsCheckboxes");
 

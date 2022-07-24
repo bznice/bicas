@@ -39,6 +39,14 @@
     padding: 5px;
 }
 
+.digitbtn {
+    background-color: lightgray;
+    border-color: gray;
+    color: #121212;
+    padding: 5px;
+    width: fit-content;
+}
+
 .addplayerbtn:disabled {
     color: var(--addplr-button-text-color-disabled);
 }

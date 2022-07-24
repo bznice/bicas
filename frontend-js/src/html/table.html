@@ -1,4 +1,4 @@
-<table class="tablePlayers">
+<table>
     <tr>
       <th>Delete</th>
       <th>Name</th>
@@ -18,8 +18,11 @@
       <td>{{player.category}}</td>
       <td>{{player.pointslr}}</td>
       <td>
-        <input class="form-control form-points" type="text"
-          ng-model="player.points" placeholder="Points" />
+        <input id="{{player.name}}"
+            class="form-control form-points"
+            type="text"
+            ng-model="player.points"
+            placeholder="Points"/>
       </td>
       <td>
         <input type="checkbox" ng-model="player.dealer" value=true/>
@@ -29,6 +32,7 @@
       </td>
     </tr>
   </table>
+  <ng-include src="'frontend-js/src/html/numPad.html'"></ng-include>
   <p></p>
   <button class="btn addpointsbtn" ng-click="addPoints()">Add Points</button>
   <span id="errorPointsCheckboxes" class="errorSpan"></span>

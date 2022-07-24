@@ -5,13 +5,14 @@
 
   <title>Bicas</title>
   <link rel="icon" type="image/x-icon" href="frontend-js/lib/icons/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/style.css">
-  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/themes.css">
-  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/table.css">
-  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/info.css">
   <link rel="stylesheet" type="text/css" href="frontend-js/src/css/button.css">
+  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/info.css">
   <link rel="stylesheet" type="text/css" href="frontend-js/src/css/input.css">
+  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/numPad.css">
   <link rel="stylesheet" type="text/css" href="frontend-js/src/css/span.css">
+  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/table.css">
+  <link rel="stylesheet" type="text/css" href="frontend-js/src/css/themes.css">
   <script src="frontend-js/lib/angular/angular.js"></script>
   <script src="frontend-js/src/control/bicas.js"></script>
   <script src="frontend-js/src/control/info.js"></script>
@@ -21,37 +22,36 @@
 <body ng-controller="bicasCtrl">
 
   <button class="btn themebtn" ng-click="toggleTheme()">Toggle Theme</button>
-  
+
   <h1>LETS PLAY BICAS!</h1>
-  
+
   <div class="division">
 
-    <ng-include src="'frontend-js/src/html/table.html'"
-      ng-if="playersN" class="roundTable"></ng-include>
-    
+    <ng-include src="'frontend-js/src/html/table.html'" ng-if="playersN" class="roundTable"></ng-include>
+
     <h3>Insert player(s):</h3>
 
     <span id="errorPlayerExists" class="errorSpan"></span>
-
-    <input class="form-control form-player" type="text" ng-model="player.name" placeholder="name or name, name, ..." />
     
+    <input id="nameInsertInputText" class="form-control form-player" type="text" ng-model="player.name" ng-enter="addPlayer(player)" placeholder="name or name, name, ..."/>
+
     <button class="btn addplayerbtn" ng-click="addPlayer(player)" ng-disabled="!player.name">
       Add Player(s)
     </button>
-    
+
     <div class="infoButtons">
       <button class="btn infobtn" ng-click="showHideAppInfo()">{{appInfoButtonText}}</button>
       <button class="btn infobtn" ng-click="showHideGameInfo()">{{gameInfoButtonText}}</button>
     </div>
-    
-      <ng-include src="'frontend-js/src/html/appInfo.html'" ng-controller="infoCtrl"
-        ng-if="appInfoButton" class="rules"></ng-include>
-    
-    <ng-include src="'frontend-js/src/html/gameInfo.html'" ng-controller="infoCtrl"
-      ng-if="gameInfoButton" class="rules"></ng-include>
+
+    <ng-include src="'frontend-js/src/html/appInfo.html'" ng-controller="infoCtrl" ng-if="appInfoButton" class="rules">
+    </ng-include>
+
+    <ng-include src="'frontend-js/src/html/gameInfo.html'" ng-controller="infoCtrl" ng-if="gameInfoButton"
+      class="rules"></ng-include>
 
   </div>
-  
+
   <span id="themeChanged"></span>
 
 </body>

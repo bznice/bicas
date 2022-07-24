@@ -1,0 +1,5 @@
+.numPad {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: min-content min-content min-content;
+}
