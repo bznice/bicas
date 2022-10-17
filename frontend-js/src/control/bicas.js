@@ -195,10 +195,6 @@ angular.module("bicas").controller("bicasCtrl", ['$scope', function ($scope) {
         
     }
 
-    // document.getElementById("ze").addEventListener("click", () => {
-
-    // });
-
     var validatePointsAndCheckboxes = function () {
         var error = document.getElementById("errorPointsCheckboxes");
 
