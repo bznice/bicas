@@ -42,3 +42,8 @@ body,
     grid-template-columns: 100%;
     justify-content: center;
 }
+
+#mainTitle {
+    font-size: 40px;
+    font-style: normal;
+}
